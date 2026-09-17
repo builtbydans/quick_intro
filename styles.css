@@ -313,25 +313,6 @@ body {
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 48rem) {
-  html {
-    font-size: clamp(0.5rem, 1.667vw, 1rem);
-  }
-
-  .page {
-    padding: 1rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .work-desc {
-    max-width: none;
-  }
-}
-
 @media (max-height: 46rem) {
   body {
     font-size: 0.75rem;
@@ -380,5 +361,92 @@ body {
 
   .elsewhere {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  .page {
+    min-height: 100dvh;
+    height: auto;
+    padding: 2rem 1.25rem;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .bio {
+    margin-top: 1.75rem;
+  }
+
+  .bio p {
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+  }
+
+  .meta-row {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .meta dd,
+  .meta a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .work-item {
+    padding: 1.25rem 0;
+  }
+
+  .work-desc {
+    max-width: none;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+
+  .work-creds {
+    margin-top: 0.75rem;
+  }
+
+  .elsewhere {
+    margin-top: 2rem;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@media (max-width: 24rem) {
+  .work-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 }
